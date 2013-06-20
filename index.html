@@ -1,0 +1,618 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/bootstrap-2.3.1.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive-2.3.1.min.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- endbuild -->
+</head>
+<body ng-app="homepageApp">
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser
+    today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
+    experience this site.</p>
+<![endif]-->
+
+<div class="navbar" ng-controller="MainCtrl">
+    <a class="logo" href="#"></a>
+    <nav>
+        <ul>
+            <li><a href="#/">home</a></li>
+        </ul>
+    </nav>
+</div>
+
+<section id="content">
+<article class="page">
+<section id="tables">
+
+<h3 class="tip right-border">Try to resize -></h3>
+
+<h1>
+    Tables
+    <small>responsive</small>
+</h1>
+<h3><a href="#" class="icon-github"> Github project</a></h3>
+
+<h2 class="subheader">Easy customizable, framework agnostic, responsive table patterns written with SASS and easy to use
+    with Twitter Bootstrap</h2>
+
+<h2>Basic one - revert whole table and add scroll for table body</h2>
+
+<p>Pretty simple to use, just add <code>.table-revert</code> class to table. No need to use any additional containers,
+    just switching display mode for <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>
+    and <code>&lt;tr&gt;</code></p>
+
+<table class="table table-bordered table-responsive table-revert">
+    <thead>
+    <tr>
+        <th>Column title</th>
+        <th>column 3</th>
+        <th>column 4</th>
+        <th>column 5</th>
+        <th>column 6</th>
+        <th>column 7</th>
+        <th>column 8</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            Lorem ipsum dolor sit
+        </td>
+        <td>8762</td>
+        <td>765</td>
+        <td>7652</td>
+        <td>3654</td>
+        <td>1761</td>
+        <td>963</td>
+    </tr>
+    <tr>
+        <td>
+            Donec fringilla fringilla metus
+        </td>
+        <td>8762</td>
+        <td>765</td>
+        <td>7652</td>
+        <td>3654</td>
+        <td>1761</td>
+        <td>963</td>
+    </tr>
+    <tr>
+        <td>
+            Cum sociis natoque
+        </td>
+        <td>8762</td>
+        <td>765</td>
+        <td>7652</td>
+        <td>3654</td>
+        <td>1761</td>
+        <td>963</td>
+    </tr>
+    <tr>
+        <td>
+            Nullam et euismod quam
+        </td>
+        <td>8762</td>
+        <td>765</td>
+        <td>7652</td>
+        <td>3654</td>
+        <td>1761</td>
+        <td>963</td>
+    </tr>
+    <tr>
+        <td>
+            Duis varius mauris vitae lorem
+        </td>
+        <td>8762</td>
+        <td>765</td>
+        <td>7652</td>
+        <td>3654</td>
+        <td>1761</td>
+        <td>963</td>
+    </tr>
+    <tr>
+        <td>
+            Duis interdum dui a orci euismod ultricies
+        </td>
+        <td>8762</td>
+        <td>765</td>
+        <td>7652</td>
+        <td>3654</td>
+        <td>1761</td>
+        <td>963</td>
+    </tr>
+    </tbody>
+</table>
+
+<br>
+<pre class="prettyprint linenums">
+&lt;table class="table table-bordered table-responsive table-revert"&gt;
+     ...
+&lt;table&gt;
+</pre>
+
+
+<hr class="bs-docs-separator">
+
+<h2>Next one - fix first column and add scroll</h2>
+
+<p>More complicated and bit ugly - two additional wrappers for table, if parent element haven't <code>position:
+    relative</code>, and one in another case. But if needed to fix first column as it is and scrolls all others - there
+    is no other way</p>
+<br>
+
+<div class="table-responsive-wrapper">
+    <div class="table-responsive-scroll">
+        <table class="table table-bordered table-responsive fix-col">
+            <thead>
+            <tr>
+                <th class="persist no-sort">Column title</th>
+                <th class="placeholder persist"></th>
+                <th>column 1</th>
+                <th>column 2</th>
+                <th>column 3</th>
+                <th>column 4</th>
+                <th>column 5</th>
+                <th>column 6</th>
+                <th>column 7</th>
+                <th>column 8</th>
+            </tr>
+            </thead>
+            <tr>
+                <td>
+                    <div>
+                        Nulla quis feugiat tellus
+                    </div>
+                </td>
+                <td class="placeholder"></td>
+                <td>1234</td>
+                <td>765</td>
+                <td>765</td>
+                <td>167654</td>
+                <td>54</td>
+                <td>43</td>
+                <td>65654</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>
+                    Mauris sit amet leo non
+                </td>
+                <td class="placeholder"></td>
+                <td>1234</td>
+                <td>765</td>
+                <td>765</td>
+                <td>167654</td>
+                <td>5</td>
+                <td>34</td>
+                <td>654</td>
+                <td>121543</td>
+            </tr>
+            <tr>
+                <td>
+                    Pellentesque habitant morbi
+                </td>
+                <td class="placeholder"></td>
+                <td>1234</td>
+                <td>765</td>
+                <td>765</td>
+                <td>167654</td>
+                <td>65</td>
+                <td>456</td>
+                <td>654645</td>
+                <td>121543</td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+<br>
+<pre class="prettyprint linenums">
+&lt;div class="table-responsive-wrapper"&gt;
+    &lt;div class="table-responsive-scroll"&gt;
+        &lt;table class="table-responsive fix-col"&gt;
+            …
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<hr class="bs-docs-separator">
+
+<h2>Another simple option - just hide columns one by one for different devices</h2>
+
+<p>Default bootstrap classes like <code>.hidden-tablet</code> or <code>.hidden-phone</code> or
+    <code>.hidden-desktop</code> are quite usefull for that.</p>
+<br>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Column title</th>
+        <th class="hidden-tablet">Hidden for tablets</th>
+        <th class="hidden-phone">Hidden for phone</th>
+        <th>column 3</th>
+        <th>column 4</th>
+        <th>column 5</th>
+        <th>column 6</th>
+    </tr>
+    </thead>
+    <tr>
+        <td>
+            Fusce quam orci
+        </td>
+        <td class="text-center hidden-tablet">1234</td>
+        <td class="text-center hidden-phone">765</td>
+        <td>765</td>
+        <td>167654</td>
+        <td>121543</td>
+        <td>121543</td>
+    </tr>
+    <tr>
+        <td>
+            Mauris porta enim risus
+        </td>
+        <td class="text-center hidden-tablet">1234</td>
+        <td class="text-center hidden-phone">765</td>
+        <td>765</td>
+        <td>167654</td>
+        <td>121543</td>
+        <td>121543</td>
+    </tr>
+    <tr>
+        <td>
+            Vivamus ut porta risus
+        </td>
+        <td class="text-center hidden-tablet">1234</td>
+        <td class="text-center hidden-phone">765</td>
+        <td>765</td>
+        <td>167654</td>
+        <td>121543</td>
+        <td>121543</td>
+    </tr>
+
+</table>
+
+<br>
+<pre class="prettyprint linenums">
+    &lt;th class="hidden-tablet"&gt;Hidden for tablets&lt;/th&gt;
+    &lt;th class="hidden-phone"&gt;Hidden for phone&lt;/th&gt;
+</pre>
+
+
+<hr class="bs-docs-separator">
+
+<h2>A little bit javascript - hide few columns, and let user choose what he wants to see</h2>
+
+<p>To use it, class <code>.hidden-col</code> should be added for all unnecessary columns. And <code>.toggle-col</code>
+    class with data attribute <code>data-target="#toggle-cols"</code>
+    to set-up dropdown container, for a table </p>
+
+<div class="row-fluid">
+    <div class="dropdown pull-left">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle btn">Choose visible columns</a>
+        <ul class="dropdown-menu" id="toggle-cols"></ul>
+    </div>
+</div>
+<br>
+
+<table class="table table-bordered table-responsive toggle-col" data-target="#toggle-cols"
+       data-tables="responsive-table">
+    <thead>
+    <tr>
+        <th class="persist no-sort">Column title</th>
+        <th>column 0</th>
+        <th class="hidden-col">hide this column</th>
+        <th>column 1</th>
+        <th>column 2</th>
+        <th>column 3</th>
+        <th class="hidden-col">and this one two</th>
+        <th>column 5</th>
+        <th>column 6</th>
+    </tr>
+    </thead>
+    <tr>
+        <td>
+            Fixed first column
+        </td>
+        <td>1234</td>
+        <td class="hidden-col">9</td>
+        <td>1234</td>
+        <td>765</td>
+        <td>765</td>
+        <td class="hidden-col">167654</td>
+        <td>121543</td>
+        <td>121543</td>
+    </tr>
+    <tr>
+        <td>
+            Fixed first column
+        </td>
+        <td>1234</td>
+        <td class="hidden-col">9</td>
+        <td>1234</td>
+        <td>765</td>
+        <td>765</td>
+        <td class="hidden-col">167654</td>
+        <td>121543</td>
+        <td>121543</td>
+    </tr>
+    <tr>
+        <td>
+            Fixed first column
+        </td>
+        <td>1234</td>
+        <td class="hidden-col">9</td>
+        <td>1234</td>
+        <td>765</td>
+        <td>765</td>
+        <td class="hidden-col">167654</td>
+        <td>121543</td>
+        <td>121543</td>
+    </tr>
+
+    <tr>
+        <td>
+            Fixed first column
+        </td>
+        <td>1234</td>
+        <td class="hidden-col">9</td>
+        <td>1234</td>
+        <td>765</td>
+        <td>765</td>
+        <td class="hidden-col">167654</td>
+        <td>121543</td>
+        <td>121543</td>
+    </tr>
+</table>
+
+<br>
+<pre class="prettyprint linenums">
+&lt;table class="table table-bordered table-responsive toggle-col"
+    data-target="#toggle-cols" data-tables="responsive-table"&gt;
+    …
+&lt;/table&gt;
+</pre>
+
+<hr class="bs-docs-separator">
+
+
+<h2>Drilldown support, to create views with "nested rows" </h2>
+
+
+<p>To set up add <code>.drilldown</code> class and <code>data-tables="responsive-table"</code> attribute to a table </p>
+
+<br>
+
+<table class="table table-bordered table-responsive drilldown" data-tables="responsive-table">
+    <thead>
+    <tr data-level="0" class="parent">
+        <th class="persist no-sort">Column title</th>
+        <th>column 1</th>
+        <th>column 2</th>
+        <th>column 3</th>
+        <th>column 4</th>
+        <th>column 5</th>
+        <th>column 6</th>
+    </tr>
+    </thead>
+    <tr data-level="0" class="parent">
+        <td>
+            <div>
+                <a href="#" class="toggle pull-right" data-toggle="table-row"></a>
+                Fixed first column
+            </div>
+        </td>
+        <td>1234</td>
+        <td>765</td>
+        <td>765</td>
+        <td>167654</td>
+        <td>121543</td>
+        <td>121543</td>
+    </tr>
+    <tr data-level="1" class="level-1  ">
+        <td>
+            <div>
+                Fixed first column
+            </div>
+        </td>
+        <td class="hidden-col">9</td>
+        <td>1234</td>
+        <td>765</td>
+        <td>765</td>
+        <td>167654</td>
+        <td>121543</td>
+        <td>121543</td>
+    </tr>
+    <tr data-level="1" class="level-1   parent">
+        <td>
+            <div>
+                <a href="#" class="toggle pull-right" data-toggle="table-row"></a>
+
+                Fixed first column
+            </div>
+        </td>
+
+        <td class="hidden-col">9</td>
+        <td>1234</td>
+        <td>765</td>
+        <td>765</td>
+        <td>167654</td>
+        <td>121543</td>
+        <td>121543</td>
+    </tr>
+
+    <tr data-level="2" class="level-2  ">
+        <td>
+            <div>
+                Fixed first column
+            </div>
+        </td>
+        <td class="hidden-col">9</td>
+        <td>1234</td>
+        <td>765</td>
+        <td>765</td>
+        <td>167654</td>
+        <td>121543</td>
+        <td>121543</td>
+    </tr>
+</table>
+<br>
+<pre class="prettyprint linenums">
+&lt;table class="table table-bordered table-responsive drilldown"
+    data-tables="responsive-table"&gt;
+  …
+&lt;/table&gt;
+</pre>
+
+
+<hr class="bs-docs-separator">
+
+
+<h2>Everything is pretty stackable, so it's possible to create such a "monster":</h2>
+
+
+<div class="row-fluid">
+    <div class="dropdown pull-left">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle btn">Choose visible columns</a>
+        <ul class="dropdown-menu" id="toggle-cols-monster"></ul>
+    </div>
+</div>
+<br>
+
+<div class="table-responsive-wrapper">
+    <div class="table-responsive-scroll">
+        <table class="table table-bordered table-responsive fix-col drilldown toggle-col"
+               data-target="#toggle-cols-monster" data-tables="extables">
+            <thead>
+            <tr data-level="0" class="parent">
+                <th class="persist no-sort">Column title</th>
+                <th class="placeholder persist"></th>
+                <th class="hidden-col">auto-hide column</th>
+                <th>column 1</th>
+                <th>column 2</th>
+                <th>column 3</th>
+                <th>column 4</th>
+                <th>column 5</th>
+                <th>column 6</th>
+                <th>column 7</th>
+                <th>column 8</th>
+            </tr>
+            </thead>
+            <tr data-level="0" class="parent">
+                <td>
+                    <div>
+                        <a href="#" class="toggle pull-right" data-toggle="table-row"></a>
+                        Fixed first column
+                    </div>
+                </td>
+                <td class="placeholder"></td>
+                <td class="hidden-col">9</td>
+                <td>1234</td>
+                <td>765</td>
+                <td>765</td>
+                <td>167654</td>
+                <td>121543</td>
+                <td>121543</td>
+                <td> 121543</td>
+                <td>121543</td>
+            </tr>
+            <tr data-level="1" class="level-1  ">
+                <td>
+                    <div>
+                        Fixed first column
+                    </div>
+                </td>
+                <td class="placeholder"></td>
+                <td class="hidden-col">9</td>
+                <td>1234</td>
+                <td>765</td>
+                <td>765</td>
+                <td>167654</td>
+                <td>121543</td>
+                <td>121543</td>
+                <td> 121543</td>
+                <td>121543</td>
+            </tr>
+            <tr data-level="1" class="level-1   parent">
+                <td>
+                    <div>
+                        <a href="#" class="toggle pull-right" data-toggle="table-row"></a>
+
+                        Fixed first column
+                    </div>
+                </td>
+
+                <td class="placeholder"></td>
+                <td class="hidden-col">9</td>
+                <td>1234</td>
+                <td>765</td>
+                <td>765</td>
+                <td>167654</td>
+                <td>121543</td>
+                <td>121543</td>
+                <td> 121543</td>
+                <td>121543</td>
+            </tr>
+
+            <tr data-level="2" class="level-2  ">
+                <td>
+                    <div>
+                        Fixed first column
+                    </div>
+                </td>
+                <td class="placeholder"></td>
+                <td class="hidden-col">9</td>
+                <td>1234</td>
+                <td>765</td>
+                <td>765</td>
+                <td>167654</td>
+                <td>121543</td>
+                <td>121543</td>
+                <td> 121543</td>
+                <td>121543</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<br>
+<pre class="prettyprint linenums">
+&lt;table class="table table-bordered table-responsive fix-col drilldown toggle-col"
+       data-target="#toggle-cols-monster" data-tables="extables"e&gt;
+  …
+&lt;/table&gt;
+</pre>
+
+
+<hr class="bs-docs-separator">
+
+
+</section>
+
+</article>
+</section>
+<script type="text/javascript" src="js/jquery-min.js"></script>
+<script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
+<script type="text/javascript" src="js/bootstrap-responsive-tables.js"></script>
+<script type="text/javascript" src="js/prettify.js"></script>
+
+<script type="text/javascript">
+    window.prettyPrint && prettyPrint()
+</script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+$tableBreakWidth: 1024px;
+$firtColWidth: 200px;
+
+@mixin respond-to($media) {
+    @if $media == break {
+        @media only screen and (max-width: $tableBreakWidth) {
+            @content;
+        }
+    }
+}
+
+.table-responsive-wrapper {
+    position: relative;
+
+    .dropdown.toggle-col {
+        position: absolute;
+        left: 0;
+        top: -15px;
+    }
+}
+
+.table-responsive-scroll {
+    width: 100%;
+    overflow: auto;
+
+    tr,
+    td {
+        vertical-align: middle;
+    }
+}
+
+.table-responsive {
+    max-width: 2000px;
+    width: 100%;
+
+    @include respond-to(break) {
+        .hidden-col {
+            display: none;
+        }
+    }
+
+    &.fix-col {
+        .placeholder {
+            display: none;
+            height: 28px;
+            width: $firtColWidth - 1;
+        }
+        td {
+            padding: 10px;
+            background: #fff;
+
+        }
+        th {
+            vertical-align: middle;
+            background: #fff;
+
+            select {
+                @include box-sizing(border-box);
+
+                font-size: 12px;
+                text-transform: none;
+                font-weight: bold;
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        @include respond-to(break) {
+            width: 1250px;
+            table-layout: auto;
+
+            .placeholder {
+                display: table-cell;
+            }
+
+            .table-subheader {
+                td {
+                    margin: 0 !important;
+                }
+            }
+
+            td {
+                height: 20px !important;
+                line-height: 20px;
+
+                h4 {
+                    line-height: 15px;
+                }
+            }
+
+            th:first-child,
+            td:first-child {
+                @include box-shadow(5px 0 2px 0 rgba(0, 0, 0, .2));
+
+                text-align: left;
+                position: absolute;
+                white-space: nowrap;
+                overflow: hidden;
+                left: 0;
+                margin: 0;
+                width: $firtColWidth;
+                z-index: 2;
+            }
+
+            th:first-child {
+                line-height: 30px;
+                z-index: 3;
+            }
+
+            th{
+                padding: 10px;
+                height: 30px;
+            }
+
+
+        }
+    }
+
+    &.drilldown {
+        td:first-child {
+            text-align: left;
+        }
+        .parent {
+            td {
+                background: #fff;
+            }
+            .toggle {
+                float: right;
+                width: 16px;
+                padding: 5px 0;
+                text-align: center;
+                margin: -12px 0 -16px;
+                height: 28px;
+                line-height: 28px;
+                font-size: 20px;
+                color: #999;
+                text-decoration: none;
+                outline: none !important;
+
+                &:before {
+                    content: "-";
+                }
+            }
+            &.collapsed {
+                .toggle:before {
+                    position: relative;
+                    content: "+";
+                }
+            }
+        }
+
+        .level-1 td {
+            background: #f1f1f1;
+            &:first-child {
+                padding-left: 45px;
+                width: $firtColWidth - 35;
+            }
+        }
+
+
+        .level-2 td {
+            background: #e6e6e6;
+
+            &:first-child {
+                padding-left: 70px;
+                width: $firtColWidth - 60;
+
+            }
+        }
+    }
+}
+
+.table-revert {
+
+    @include respond-to(break) {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+
+        td, th {
+            height: auto;
+            border: none;
+            border-bottom: 1px solid #ddd !important;
+            border-left: 1px solid #ddd !important;
+        }
+        thead {
+            float: left;
+
+            th {
+                @include box-shadow(5px 0 2px -1px rgba(0, 0, 0, .2));
+
+                position: relative;
+                display: block;
+            }
+        }
+        tbody {
+            white-space: nowrap;
+            overflow: auto;
+            display: block;
+            width: auto;
+
+            tr {
+                display: inline-block;
+
+                td {
+                    display: block;
+                }
+            }
+        }
+    }
+
+}
